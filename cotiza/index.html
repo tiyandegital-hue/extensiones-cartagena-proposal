@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cotiza por WhatsApp — Extensiones Cartagena Peluquería</title>
+<meta name="description" content="Demo interactiva del bot de WhatsApp de Extensiones Cartagena Peluquería: cotiza extensiones, agenda tu cita o consulta la micropigmentación de cejas en un minuto.">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<div class="topbar">Bocagrande, Cartagena · <strong>Diagonal a la entrada del Batallón de Infantería de Marina No. 12</strong></div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/">
+      <span class="brand-name" data-business-name>Extensiones Cartagena Peluquería</span>
+      <span class="brand-sub">Madeleine Mercado · Bocagrande</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/catalogo/">Catálogo</a></li>
+        <li><a href="/cotiza/" aria-current="page">Cotizar por WhatsApp</a></li>
+        <li><a href="/transformaciones/">Transformaciones</a></li>
+        <li><a href="/servicios/">Servicios</a></li>
+        <li><a href="/contacto/">Contacto</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-plum btn-sm header-cta" href="https://wa.me/573242954655?text=Hola%2C%20quiero%20cotizar%20extensiones.">Cotizar ahora</a>
+  </div>
+</header>
+
+<main>
+  <section class="section" style="padding-top:64px">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Cotización exprés</span>
+        <h1>Cotiza por <em>WhatsApp</em></h1>
+        <p class="lead">MadeBot te atiende en un minuto: cuéntanos qué buscas, elige color y técnica, dinos tu ciudad y recibe tu solicitud de cotización lista para enviar.</p>
+      </div>
+
+      <div class="demo-banner reveal">
+        <span class="demo-ic" aria-hidden="true">i</span>
+        <p><strong>Demo interactiva.</strong> Este chat es una muestra de cómo funcionaría el bot del salón: el bot responde al instante dentro de esta página. Tu cita y tu cotización las confirma el salón por WhatsApp — nada de lo que escribas aquí se envía solo.</p>
+      </div>
+
+      <div class="split split-narrow">
+        <!-- Phone with the live chat mock -->
+        <div class="phone-wrap reveal">
+          <div class="phone">
+            <div class="phone-screen">
+              <div class="phone-notch"></div>
+              <div class="chat-header">
+                <span class="chat-avatar" aria-hidden="true">M</span>
+                <div class="chat-who">
+                  <strong>MadeBot · Extensiones Cartagena</strong>
+                  <span><span class="online-dot" aria-hidden="true"></span> en línea · responde al instante</span>
+                </div>
+              </div>
+              <div class="chat-body" id="chat-body" aria-live="polite">
+                <div class="chat-day">Hoy · Demo interactiva</div>
+              </div>
+              <div class="quick-replies" id="quick-replies"></div>
+              <div class="chat-actions" id="chat-actions"></div>
+              <form class="chat-input" id="chat-form">
+                <label for="chat-input" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Tu mensaje</label>
+                <input type="text" id="chat-input" placeholder="Elige una opción arriba" autocomplete="off" disabled>
+                <button type="submit" class="chat-send" id="chat-send" aria-label="Enviar mensaje" disabled>➤</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- What the salon sees -->
+        <div class="reveal reveal-d1">
+          <div class="inbox">
+            <div class="inbox-head">
+              <h3>Bandeja de entrada — Cotizaciones</h3>
+              <p>Lo que ve el salón cuando una clienta completa el bot. Las solicitudes llegan ordenadas, con ciudad y técnica.</p>
+            </div>
+            <ul class="inbox-list" id="inbox-list">
+              <li class="inbox-item">
+                <span class="inbox-ic" aria-hidden="true">✦</span>
+                <div>
+                  <strong>Cliente · Cotización de extensiones</strong>
+                  <span class="inbox-meta">Largo y color a elegir · Envío nacional · Hoy</span>
+                </div>
+                <span class="inbox-status new">Nueva</span>
+              </li>
+              <li class="inbox-item">
+                <span class="inbox-ic" aria-hidden="true">✦</span>
+                <div>
+                  <strong>Cliente · Agendar cita</strong>
+                  <span class="inbox-meta">Peluquería · Hoy</span>
+                </div>
+                <span class="inbox-status">En revisión</span>
+              </li>
+              <li class="inbox-item">
+                <span class="inbox-ic" aria-hidden="true">✦</span>
+                <div>
+                  <strong>Cliente · Micropigmentación</strong>
+                  <span class="inbox-meta">Consulta de diseño · Ayer</span>
+                </div>
+                <span class="inbox-status done">Respondida</span>
+              </li>
+              <li class="inbox-item">
+                <span class="inbox-ic" aria-hidden="true">✦</span>
+                <div>
+                  <strong>Cliente · Cotización de extensiones</strong>
+                  <span class="inbox-meta">Largo y color a elegir · Envío nacional · Ayer</span>
+                </div>
+                <span class="inbox-status done">Respondida</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="info-panel" style="margin-top:28px">
+            <h3>¿Prefieres hablar con una persona?</h3>
+            <p>Madeleine te atiende personalmente por WhatsApp en horario de salón: lunes a viernes 09:00–19:00, sábado 08:00–20:00 y domingo 09:00–17:00.</p>
+            <a class="btn btn-wa" href="https://wa.me/573242954655?text=Hola%20Madeleine%2C%20quiero%20hablar%20contigo.">Abrir WhatsApp con Madeleine</a>
+            <p style="margin-top:16px;font-size:.9rem;color:var(--muted)">También puedes escribir al WhatsApp de cotizaciones 300 464 8942 o llamar al 605 652 3576.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand">Extensiones <em>Cartagena</em> Peluquería</p>
+        <p>Cabello 100% humano virgen, compra y venta de cabello natural, postura punto en hilo brasilero y envíos nacionales.</p>
+      </div>
+      <div>
+        <h3>Visítanos</h3>
+        <ul>
+          <li>Calle 10a Carrera 2/38, Bocagrande, Cartagena, Colombia</li>
+          <li>Diagonal a la entrada del Batallón de Infantería de Marina No. 12</li>
+          <li>Lun–Vie 09:00–19:00 · Sáb 08:00–20:00 · Dom 09:00–17:00</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Escríbenos</h3>
+        <ul>
+          <li>WhatsApp: <a href="https://wa.me/573242954655">+57 324 295 4655</a></li>
+          <li>Cotizaciones: <a href="https://wa.me/573004648942">300 464 8942</a></li>
+          <li>Teléfono: <a href="tel:+576056523576">605 652 3576</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> <span data-business-name>Extensiones Cartagena Peluquería</span>. Todos los derechos reservados.</span>
+      <span><a href="/privacidad/">Privacidad</a> · <a href="/terminos/">Términos</a></span>
+    </div>
+  </div>
+</footer>
+<a class="sticky-wa" href="https://wa.me/573242954655?text=Hola%2C%20quiero%20cotizar%20extensiones."><span class="wa-ic" aria-hidden="true">✆</span> WhatsApp</a>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/chat.js"></script>
+</body>
+</html>
